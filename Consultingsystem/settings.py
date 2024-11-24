@@ -28,9 +28,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # AWS S3 Configurations
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID ='AKIAVVZOOTMI4M5A3TEM' #env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = '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'#env('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME ='django-candidate-management-s3-bucket00'# env('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
@@ -93,14 +93,24 @@ ROOT_URLCONF = "Consultingsystem.urls"
 WSGI_APPLICATION = "Consultingsystem.wsgi.application"
 
 # Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env('DATABASES_NAME'),
+#         'USER': env('DATABASES_USER'),
+#         'PASSWORD': env('DATABASES_PASSWORD'),
+#         'HOST': env('DATABASES_HOST'),
+#         'PORT': env('DATABASES_PORT'),
+#     }
+#}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASES_NAME'),
-        'USER': env('DATABASES_USER'),
-        'PASSWORD': env('DATABASES_PASSWORD'),
-        'HOST': env('DATABASES_HOST'),
-        'PORT': env('DATABASES_PORT'),
+        'NAME': 'defaultdb',
+        'USER': 'postgres',
+        'PASSWORD':'AVNS_vw3JE7WlO7UZyQs7Y-0',
+        'HOST': 'ec2-13-60-251-62.eu-north-1.compute.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
@@ -134,7 +144,7 @@ LOGIN_URL = '/login/'
 
 # Localization
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Amman"
 USE_I18N = True
 USE_TZ = True
 
