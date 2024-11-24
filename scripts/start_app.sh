@@ -20,8 +20,8 @@ echo "Activating virtual environment..."
 source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv/bin/activate"
 
 # Run collectstatic command
-echo "Running collectstatic command..."
-python manage.py collectstatic --noinput
+#echo "Running collectstatic command..."
+#python manage.py collectstatic --noinput
 
 # Restart Gunicorn and Nginx services
 echo "Restarting Gunicorn and Nginx services..."
