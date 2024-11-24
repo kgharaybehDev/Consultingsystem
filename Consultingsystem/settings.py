@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "storages",
     "debug_toolbar",
+    'whitenoise.runserver_nostatic'
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.LoginRequiredMiddleware",
 
     'simple_history.middleware.HistoryRequestMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "Consultingsystem.urls"
